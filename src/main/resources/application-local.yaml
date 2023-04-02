@@ -1,0 +1,21 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+      naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      jpa:
+        properties:
+          hibernate:
+            default_schema: player_data
+    datasource:
+      initialization-mode: always
+      url: jdbc:h2:mem:testdb;
+      driver-class-name: org.h2.Driver
+      username: sa
+      password:
+
+logging:
+  level:
+    root: info
+
+game_service_host: http://localhost:8081/
